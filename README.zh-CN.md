@@ -1,4 +1,4 @@
-<div align="right">Language: :us:<a title="Chinese" href="README.zh-CN.md">:cn:</a></div>
+<div align="right">语言: <a title="English" href="README.md">:us:</a>:cn:</div>
 
 # Amber
 
@@ -15,61 +15,60 @@
 [pr-badge]: https://img.shields.io/github/issues-pr/Mitscherlich/hexo-theme-amber.svg
 [pr-url]: https://github.com/Mitscherlich/hexo-theme-amber/pulls
 
-
-Hexo theme based on Vue.js and Bootstrap for [mitscherlich.me](https://mitscherlich.me).
-
 ![Preview](https://raw.githubusercontent.com/Mitscherlich/hexo-theme-amber/master/docs/assets/Preview.png)
 
-> **⚠️ Note:** This theme cannot be use as a individual Vue.js spa. You need to setup a Hexo blog.
+Hexo 博客主题 for [mitscherlich.me](https://mitscherlich.me).
 
-## Install
+> **⚠️ Note:** 这个主题虽然基于 Vue.js 开发，但并不能作为一个独立应用使用。你需要设置一个 Hexo 博客.
 
-via this repo:
+## 安装
+
+通过本仓库:
 
 ```bash
 $ git clone https://github.com/Mitscherlich/hexo-theme-amber.git themes/amber
 ```
 
-Then modify you `_config.yml`:
+接着修改你博客的 `_config.yml`:
 
 ```yml
 # ...
 ## Theme
-theme: amber  # this enable your theme config
+theme: amber  # 启用主题
 # ...
 ```
 
-Enjoy your writing!
+开始享受吧!
 
 ```bash
 $ hexo clean && hexo serve
 ```
 
-## Develop
+## 开发
 
-This theme provide prebuild static assets on default branch. You may need to checkout [`master`](https://github.com/Mitscherlich/hexo-theme-amber/tree/master) branch if you want to custom the theme. There is no difference with Vue development you are familiar with:
+本仓库的默认分支提供了预编译的静态文件，如果你想自定义主题，请从 [`master`](https://github.com/Mitscherlich/hexo-theme-amber/tree/master) 分支获取代码，接下来的一切和你所熟悉的 `Vue` 开发并无二异：
 
 ```bash
 $ git clone https://github.com/Mitscherlich/hexo-theme-amber.git -b master themes/amber-dev
-$ cd themes/amber-dev && npm install # Also, yarn will be ok
+$ cd themes/amber-dev && npm install # 当然，你也可使用 yarn
 ```
 
-Just follow the installation, but notice that you have to run both `hexo serve` and `yarn serve` at the same time. Otherwise you will not get the posts data.
+只是注意你需要同时运行 `hexo serve` 和 `yarn serve`. 否则你将获取不到博客数据.
 
 ```bash
 $ cd /path/to/blog/theme/amber-dev
 $ yarn serve
 ```
 
-Then open another terminal:
+再打开一个终端:
 
 ```bash
 $ cd /path/to/blog
 $ hexo clean && hexo serve --port 4000
 ```
 
-**Note:** hexo server must running on port `4000`. You may need to modifiy the `vue.config.js` under theme root if using other specific port.
+**Note:** 你的 Hexo 博客必须运行在 `4000` 端口上. 如果使用其他端口，你需要修改主题目录下的 `vue.config.js` 文件.
 
-## License
+## 许可证
 
 [MIT](LICENSE)
