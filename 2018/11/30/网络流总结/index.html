@@ -24,13 +24,13 @@
 <meta property="og:site_name" content="universe">
 <meta property="og:description" content="最小割改变连通性[BZOJ 1266] 上学路线显然被删除的路线一定在最短路上，在最短路图上跑最小割即可。 [BZOJ 2561] 最小生成树加入长度为 $L$ 的边 $(u,v)$，则需满足最大生成树上所有长度大于 $L$ 的边不能使 $u,v$ 连通。最小生成树同理。两次最小割的结果相加就是答案。 集合划分[BZOJ 1412] 狼和羊的故事$S$ 向所有狼连边，所有羊向 $T$ 连边，相邻的">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://images2015.cnblogs.com/blog/890886/201702/890886-20170221081306351-455916177.png">
-<meta property="og:image" content="https://img2018.cnblogs.com/blog/1538953/201812/1538953-20181202111617653-1624634932.png">
-<meta property="og:updated_time" content="2018-12-02T03:43:43.365Z">
+<meta property="og:image" content="http://yoursite.com/2018/11/30/网络流总结/01.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/30/网络流总结/02.png">
+<meta property="og:updated_time" content="2018-12-02T06:14:32.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络流总结 | universe">
 <meta name="twitter:description" content="最小割改变连通性[BZOJ 1266] 上学路线显然被删除的路线一定在最短路上，在最短路图上跑最小割即可。 [BZOJ 2561] 最小生成树加入长度为 $L$ 的边 $(u,v)$，则需满足最大生成树上所有长度大于 $L$ 的边不能使 $u,v$ 连通。最小生成树同理。两次最小割的结果相加就是答案。 集合划分[BZOJ 1412] 狼和羊的故事$S$ 向所有狼连边，所有羊向 $T$ 连边，相邻的">
-<meta name="twitter:image" content="https://images2015.cnblogs.com/blog/890886/201702/890886-20170221081306351-455916177.png">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/30/网络流总结/01.png">
     
     
     
@@ -190,13 +190,13 @@ classes that you can use:
 <h3 id="集合划分"><a href="#集合划分" class="headerlink" title="集合划分"></a>集合划分</h3><h4 id="BZOJ-1412-狼和羊的故事"><a href="#BZOJ-1412-狼和羊的故事" class="headerlink" title="[BZOJ 1412] 狼和羊的故事"></a>[BZOJ 1412] 狼和羊的故事</h4><p>$S$ 向所有狼连边，所有羊向 $T$ 连边，相邻的狼和羊连权值为 $1$ 的边。集合划分。</p>
 <h4 id="BZOJ-3144-切糕"><a href="#BZOJ-3144-切糕" class="headerlink" title="[BZOJ 3144] 切糕"></a>[BZOJ 3144] 切糕</h4><p>相当于把切糕划分为上下两部分，至于相邻两割点的高度差不超过 $d$，可以从第 $i$ 列的每一个位置 $p$ 向第 $i+1$ 列上 $p-d$ 的位置连 $\inf$ 的边。</p>
 <h4 id="BZOJ-2127-happiness"><a href="#BZOJ-2127-happiness" class="headerlink" title="[BZOJ 2127] happiness"></a>[BZOJ 2127] happiness</h4><p>$S$ 表示选文的集合，$T$ 表示选理的集合，设相邻两人都学文的收益为 $w_1$，都学理的收益为 $w_2$，可以构造出下图中 $a=b=\dfrac{w_1}{2},c=d=\dfrac{w_2}{2},e=\dfrac{w_1+w_2}{2}$</p>
-<p><img src="https://images2015.cnblogs.com/blog/890886/201702/890886-20170221081306351-455916177.png" alt=""></p>
+<p><img src="/2018/11/30/网络流总结/01.png" alt="ovo"></p>
 <p>此外，还有一种较慢的拆点做法。</p>
 <h4 id="BZOJ-3996-线性代数"><a href="#BZOJ-3996-线性代数" class="headerlink" title="[BZOJ 3996] 线性代数"></a>[BZOJ 3996] 线性代数</h4><h4 id="BZOJ-2400-Optimal-Marks"><a href="#BZOJ-2400-Optimal-Marks" class="headerlink" title="[BZOJ 2400] Optimal Marks"></a>[BZOJ 2400] Optimal Marks</h4><h3 id="最大权闭合子图"><a href="#最大权闭合子图" class="headerlink" title="最大权闭合子图"></a>最大权闭合子图</h3><p>一些点有收益，一些点有代价，选择一些点必须选择另一些点，最大化收益 $-$ 代价。</p>
 <p>$S$ 向有收益的点连流量为收益的边，有代价的点向 $T$ 连流量为代价的边，所有点向所有必须选择的点连流量为 $\inf$ 的边，答案是所有收益的和减去最小割。注意用拓扑排序判断环的存在。</p>
 <h3 id="最大密度子图"><a href="#最大密度子图" class="headerlink" title="最大密度子图"></a>最大密度子图</h3><p>求一个无向图的子图，最大化 $\dfrac{|E|}{|V|}$。</p>
 <p>二分答案 $k$，由于选择一条边就必须选择它的两个端点，于是可以化边为点，建出最大权闭合子图的模型：</p>
-<p><img src="https://img2018.cnblogs.com/blog/1538953/201812/1538953-20181202111617653-1624634932.png" alt=""></p>
+<p><img src="/2018/11/30/网络流总结/02.png" alt="qwq"></p>
 <p>把边看成收益，把点看成代价，则用边的总数减去最小割即为 $|E|-k·|V|$ 的值。若该值小于 $0$，则 $k$ 大于答案；若该值大于 $0$，则 $k$ 小于答案；否则，$k$ 即为所求的答案。</p>
 <h3 id="判定唯一性"><a href="#判定唯一性" class="headerlink" title="判定唯一性"></a>判定唯一性</h3><p>判断一个图的最小割是否唯一。</p>
 <ol>
@@ -279,7 +279,6 @@ classes that you can use:
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
