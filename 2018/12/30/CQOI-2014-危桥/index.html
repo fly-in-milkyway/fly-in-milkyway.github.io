@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   
   
-  <title>  Hexo博客搭建笔记 |   一只小松饼 </title>
+  <title>  「CQOI 2014」危桥 |   一只小松饼 </title>
 
  
   
@@ -79,18 +79,18 @@
 	
 <div class="post-header">
 	<p class="post-title">	
-		Hexo博客搭建笔记
+		「CQOI 2014」危桥
 	</p>
 
 	<div class="post-info">	
 		<span class="post-info-entry">
-			Dec 28, 2018
+			Dec 30, 2018
 		</span>
 
 		
 		
 			<i class="iconfont icon-words"></i>
-			<span class="post-info-entry">139
+			<span class="post-info-entry">944
 			</span>
 		
 	</div>
@@ -123,9 +123,21 @@
 		
 
 			
-					<h3 id="Hexo博客搭建教程"><a href="#Hexo博客搭建教程" class="headerlink" title="Hexo博客搭建教程"></a>Hexo博客搭建教程</h3><p>详见<a href="https://www.cnblogs.com/fengxiongZz/p/7707219.html" target="_blank" rel="noopener">这里</a></p>
-<h3 id="Hexo安装失败的解决方法"><a href="#Hexo安装失败的解决方法" class="headerlink" title="Hexo安装失败的解决方法"></a>Hexo安装失败的解决方法</h3><p>目前国内 $npm$ 源有问题，所以键入如下代码即可安装成功：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> -g cnpm <span class="comment">--registry=https://registry.npm.taobao.org</span></span><br><span class="line">cnpm <span class="keyword">install</span> hexo-cli -g</span><br></pre></td></tr></table></figure>  	
+					<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Alice 和 Bob 居住在一个由 $N​$ 座岛屿组成的国家，岛屿被编号为 $0​$ 到 $N-1​$。某些岛屿之间有桥相连，桥上的道路是双向的，但一次只能供一人通行。其中一些桥由于年久失修成为危桥，最多只能通行两次。Alice 希望在岛屿 $a_1​$ 和 $a_2​$ 之间往返 $a_n​$ 次（从 $a_1​$ 到 $a_2​$ 再从 $a_2​$ 到 $a_1​$ 算一次往返）。同时，Bob 希望在岛屿 $b_1​$ 和 $b_2​$ 之间往返 $b_n​$ 次。这个过程中，所有危桥最多通行两次，其余的桥可以无限次通行。请问 Alice 和 Bob 能完成他们的愿望吗？</p>
+<a id="more"></a>
+<h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p>本题有多组测试数据。<br>每组数据第一行包含 $7$ 个空格隔开的整数，分别为 $N,a_1,a_2,a_n,b_1,b_2,b_n$。<br>接下来是一个 $N$ 行 $N$ 列的对称矩阵，由大写字母组成。矩阵的 $i$ 行 $j$ 列描述编号 $i-1$ 和 $j-1$ 的岛屿间的连接情况，若为“O”则表示有危桥相连；为“N”表示有普通的桥相连；为“X”表示没有桥相连。</p>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>对于每组测试数据输出一行，如果他们都能完成愿望输出“Yes”，否则输出“No”。</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">1</span></span><br><span class="line">XOXX</span><br><span class="line">OXOX</span><br><span class="line">XOXO</span><br><span class="line">XXOX</span><br><span class="line"><span class="number">4</span> <span class="number">0</span> <span class="number">2</span> <span class="number">1</span> <span class="number">1</span> <span class="number">3</span> <span class="number">2</span></span><br><span class="line">XNXO</span><br><span class="line">NXOX</span><br><span class="line">XOXO</span><br><span class="line">OXOX</span><br></pre></td></tr></table></figure>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">Yes</span></span><br><span class="line"><span class="literal">No</span></span><br></pre></td></tr></table></figure>
+<h2 id="HINT"><a href="#HINT" class="headerlink" title="HINT"></a>HINT</h2><p>$4\leq N&lt;50, 0\leq a_1, a_2, b_1, b_2\leq N-1,1\leq a_n, b_n\leq50$</p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>注意这里“最多只能通行两次”是指“正正”或“反反”或“正反”，而不是往返两次。</p>
+<p>做法：建双向边，普通桥的容量为 $\inf$，危桥的容量为 $2$（正反都是 $2$）。然后 $S \rightarrow a_1,b_1$，$a_2,b_2\rightarrow T$ 跑一次最大流，$S\rightarrow a_1,b_2$，$a_2,b_1\rightarrow T$ 跑一次最大流，若两次的最大流均为 $2\times(a_n+b_n)$，则可行。</p>
+<p>交换 $b$ 的起始点解决了两个问题：</p>
+<ol>
+<li>防止出现一条危桥被往返走两次的情况；</li>
+<li>防止出现 $a_1$ 走到 $b_2$，$b_1$ 走到 $a_2$ 的情况。</li>
+</ol>
+  	
 					
 	  </div>     
 	  
@@ -222,7 +234,7 @@
 
         
           <i class="iconfont icon-tag"></i>     
-            <a class="tag-link" href="/tags/Hexo/">Hexo</a>    
+            <a class="tag-link" href="/tags/网络流/">网络流</a>    
         	
   </div>
 
@@ -232,22 +244,15 @@
 <nav class="post-footer-nav">
   <div class="post-footer-link">
   
-      <a href="/2018/12/28/hello-world/" id="post-nav-older" class="post-nav-link-wrap">
+      <a href="/2018/12/29/BZOJ-4453-cys就是要拿英魂！/" id="post-nav-older" class="post-nav-link-wrap">
         <strong class="post-nav-caption">older</strong>
         
-          <a class="post-nav-title" href="/2018/12/28/hello-world/">
-          Hello World</a>
+          <a class="post-nav-title" href="/2018/12/29/BZOJ-4453-cys就是要拿英魂！/">
+          「BZOJ 4453」cys就是要拿英魂！</a>
       </a>
   
   </div>
   <div class="post-footer-link">
-    
-        <a href="/2018/12/28/THUSC-2016-成绩单/" id="post-nav-newer" class="post-nav-link-wrap">
-          <strong class="post-nav-caption">newer</strong>
-             
-            <a class="post-nav-title" href="/2018/12/28/THUSC-2016-成绩单/">
-            「THUSC 2016」成绩单</a>
-        </a>
     
   </div>
 
@@ -263,7 +268,7 @@
 				Contents
 			</p>
 			<div class="toc-list">
-				<ol class="toc-inner"><li class="toc-inner-item toc-inner-level-3"><a class="toc-inner-link" href="#Hexo博客搭建教程"><span class="toc-inner-text">Hexo博客搭建教程</span></a></li><li class="toc-inner-item toc-inner-level-3"><a class="toc-inner-link" href="#Hexo安装失败的解决方法"><span class="toc-inner-text">Hexo安装失败的解决方法</span></a></li></ol>
+				<ol class="toc-inner"><li class="toc-inner-item toc-inner-level-2"><a class="toc-inner-link" href="#Description"><span class="toc-inner-text">Description</span></a></li><li class="toc-inner-item toc-inner-level-2"><a class="toc-inner-link" href="#Input"><span class="toc-inner-text">Input</span></a></li><li class="toc-inner-item toc-inner-level-2"><a class="toc-inner-link" href="#Output"><span class="toc-inner-text">Output</span></a></li><li class="toc-inner-item toc-inner-level-2"><a class="toc-inner-link" href="#Sample-Input"><span class="toc-inner-text">Sample Input</span></a></li><li class="toc-inner-item toc-inner-level-2"><a class="toc-inner-link" href="#Sample-Output"><span class="toc-inner-text">Sample Output</span></a></li><li class="toc-inner-item toc-inner-level-2"><a class="toc-inner-link" href="#HINT"><span class="toc-inner-text">HINT</span></a></li><li class="toc-inner-item toc-inner-level-2"><a class="toc-inner-link" href="#Solution"><span class="toc-inner-text">Solution</span></a></li></ol>
 			</div>
 		</div>
 	</div>
