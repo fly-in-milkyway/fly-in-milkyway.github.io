@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   
   
-  <title>  Hello World |   NAYO </title>
+  <title>  「BZOJ 4453」cys就是要拿英魂！ |   NAYO </title>
 
  
   
@@ -79,23 +79,43 @@
 	
 <div class="post-header">
 	<p class="post-title">	
-		Hello World
+		「BZOJ 4453」cys就是要拿英魂！
 	</p>
 
 	<div class="post-info">	
 		<span class="post-info-entry">
-			Dec 28, 2018
+			Dec 29, 2018
 		</span>
 
 		
 		
 			<i class="iconfont icon-words"></i>
-			<span class="post-info-entry">366
+			<span class="post-info-entry">718
 			</span>
 		
 	</div>
 </div> 
 	
+
+    <script type="text/x-mathjax-config">
+        var post = document.getElementsByClassName("post")[0];  
+        MathJax.Hub.Config({
+            showProcessingMessages: false,
+            messageStyle: "none",    
+            tex2jax: {
+                inlineMath:  [ ["$", "$"] , ["\\(","\\)"]],
+                displayMath: [ ["$$","$$"] , ["\\[","\\]"]],
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'],
+            },
+            "HTML-CSS": {            
+                showMathMenu: false
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub,post]);
+    </script>
+    <style>.MathJax{outline:0;}</style>
+
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.2/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
  
 
 	  <div class="typo post-content slideDownMin">
@@ -103,15 +123,24 @@
 		
 
 			
-					<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+					<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>pps 又开始 dota 视频直播了！一群每天被 pps 虐的蒟蒻决定学习 pps 的操作技术，他们把 pps 在这局放的技能记录了下来，每个技能用一个字符表示。经过研究，蒟蒻们发现字典序更大的连招威力更大。于是所有蒟蒻都想学习 pps 最强的连招。但是他们太弱了，不能学会整个视频里的连招，只能学会陈老师一段区间间内的连招，可是这个他们求不出，于是只好向你求助。为了蒟蒻们不再被 pps 虐（怎么可能），请你帮帮他们。简化题意：给你一个字符串，每次询问你一段区间的字典序最大的子串。</p>
+<h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p>第一行是一个字符串 S，表示 pps 放的技能</p>
+<p>第二行一个正整数 Q，表示询问个数</p>
+<p>接下来 Q 行，每行两个正整数 $[l,r]$，表示询问区间 $[l,r]$ 中的字典序最大的子串。</p>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>Q 行，每行一个正整数，表示该区间内字典序最大的子串的起始位置。</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Lets_go_mod_p!</span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">2</span> <span class="number">2</span></span><br><span class="line"><span class="number">3</span> <span class="number">3</span></span><br><span class="line"><span class="number">2</span> <span class="number">5</span></span><br><span class="line"><span class="number">1</span> <span class="number">10</span></span><br><span class="line"><span class="number">2</span> <span class="number">9</span></span><br></pre></td></tr></table></figure>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
+<h2 id="HINT"><a href="#HINT" class="headerlink" title="HINT"></a>HINT</h2><p>$1&lt;=|S|&lt;=100000, 1&lt;=Q&lt;=100000,  1&lt;=l&lt;=r&lt;=|S|$</p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>设当前右端点为 $r$，且 $i&lt;j\leq r$，考虑子串 $[i,r]$ 和 $[j,r]$ 的大小：</p>
+<ul>
+<li>若 $[i,n]&gt;[j,n]$，则 $[i,r]&gt;[j,r]$</li>
+<li>若 $[i,n]&lt;[j,n]$<ul>
+<li>若 $j+lcp(i,j)-1\geq r$，则 $[i,r]&gt;[j,r]$</li>
+<li>若 $j+lcp(i,j)-1&lt;r$，则 $[i,r]&lt;[j,r]$</li>
+</ul>
+</li>
+</ul>
+<p>将询问按照左端点从大到小排序，从右往左</p>
   	
 					
 	  </div>     
@@ -207,6 +236,9 @@
   <div class="post-footer-meta">
         	
 
+        
+          <i class="iconfont icon-tag"></i>     
+            <a class="tag-link" href="/tags/后缀数组/">后缀数组</a>    
         	
   </div>
 
@@ -216,15 +248,15 @@
 <nav class="post-footer-nav">
   <div class="post-footer-link">
   
+      <a href="/2018/12/28/NOI-2016-优秀的拆分/" id="post-nav-older" class="post-nav-link-wrap">
+        <strong class="post-nav-caption">older</strong>
+        
+          <a class="post-nav-title" href="/2018/12/28/NOI-2016-优秀的拆分/">
+          「NOI 2016」优秀的拆分</a>
+      </a>
+  
   </div>
   <div class="post-footer-link">
-    
-        <a href="/2018/12/28/Hexo博客搭建笔记/" id="post-nav-newer" class="post-nav-link-wrap">
-          <strong class="post-nav-caption">newer</strong>
-             
-            <a class="post-nav-title" href="/2018/12/28/Hexo博客搭建笔记/">
-            Hexo博客搭建笔记</a>
-        </a>
     
   </div>
 
