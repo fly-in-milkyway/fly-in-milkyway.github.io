@@ -1,526 +1,204 @@
-<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
-<html>
-  <head><meta name="generator" content="Hexo 3.8.0">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  
-  
-  <title>  一只小松饼 </title>
 
- 
-  
-    <link rel="icon" href="/images/favicon.png">
-  
+<!DOCTYPE html>
+<html lang="zh-TW" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 
+<head><meta name="generator" content="Hexo 3.8.0">
+    <title>UNIVERSE</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Milky Way">
+<meta name="description" content="A Blog Powered By Hexo">
+<meta name="keywords" content>
 
-  <link rel="stylesheet" href="/nayo.min.css"> 
-</head>  
-  <body>   
-    
-      <header class="header">
-	
-  <nav class="header-inner">        
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
 
-    <span class="iconfont icon-menu mobile-toggle"></span>   	
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?78263721">
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons">
+</noscript>
+</head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer" v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item active" href="http://fly-in-milkyway.com">
+                首頁
+            </a>
+            <a class="a-block drawer-menu-item false" href="/archives">
+                歸檔
+            </a>
 
-    <div class="header-logo">
-      <a href="/">
-        <img class="header-logo-img" src="/images/logo.png">
-      </a>
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                關於我
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            UNIVERSE
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead" v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">UNIVERSE</div>
+        <div class="single-column-header-subtitle"></div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head active" href="/">
+        <div class="nav-title">
+            Journal.
+        </div>
+        <div class="nav-subtitle">
+            隻言片語<br>於此匯聚
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            歸檔
+        </a>
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            關於我
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
     </div>
 
-    <div class="header-menu">          
-              
-          
-            <a class="header-menu-link" id="header-menu-home" href="/">
-              <i class="iconfont icon-home">  
-            </i></a>     
-          
-              
-          
-            <a class="header-menu-link" id="header-menu-archives" href="/archives">
-              <i class="iconfont icon-archives">  
-            </i></a>     
-          
-              
-          
-            <a class="header-menu-link" id="header-menu-tags" href="/tags">
-              <i class="iconfont icon-tags">  
-            </i></a>     
-          
-              
-          
-            <a class="header-menu-link" id="header-menu-about" href="/about">
-              <i class="iconfont icon-about">  
-            </i></a>     
-          
-              
-          
-              <a class="header-menu-link" id="header-menu-search">
-                <i class="iconfont icon-search">  
-              </i></a>
-          
-                  
-    </div>  
     
-  </nav>
-</header>
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2019 <a href="http://fly-in-milkyway.com">UNIVERSE</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
 
-   
+        
+        
 
-      <div class="container">       
-          
-          
-            <div class="container-inner">  
-          
+        
 
-          
-
-
-
-
-<div class="profile sildeUpMin">
-	
-		<img class="avatar" src="/images/header.jpg">
-
-		<p class="author">芒果爆浆松饼</p>
-		
-		<div class="social">
-   		      	
-			<a target="_blank" class="social-links" href="https://github.com/Lemonreds/hexo-theme-nayo">		
-				<i class="iconfont icon-Github">
-			</i></a>	
-	          	
-			<a target="_blank" class="social-links" href="https://weibo.com/liminghong2">		
-				<i class="iconfont icon-Weibo">
-			</i></a>	
-	          	
-			<a target="_blank" class="social-links" href="">		
-				<i class="iconfont icon-Facebook">
-			</i></a>	
-	          	
-			<a target="_blank" class="social-links" href="">		
-				<i class="iconfont icon-Instagram">
-			</i></a>	
-	          	
-			<a target="_blank" class="social-links" href="">		
-				<i class="iconfont icon-Neteasemusic">
-			</i></a>	
-	    
-    	</div>		
+        
+        
+    </div>
 </div>
 
-
-    	  	
-  		
-    			
-
-<article class="article">		
-	   
-	<div class="article-header">
-	    
-		<a class="article-title" href="/2018/12/30/CQOI-2014-危桥/">「CQOI 2014」危桥</a>  
-	       
-		 
-
-		<div class="article-meta">
-			<time>Dec 30, 2018</time>
-			
-				<span class="iconfont icon-star"></span>
-				            
-						<a class="article-tag" href="/tags/网络流/">网络流</a>           
-				
-			
-		</div>
-	</div>
-
-
-	
-
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-no-background">
+        
+        <a href="/2019/02/28/凡心所向，素履以往/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-divider">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            凡心所向，素履以往
+                        </div>
+                        <div class="post-item-summary">
+                            
+                        </div>
+                        <div class="post-item-meta">
+                            2019-02-28
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </a>
+        
     
-	<div class="typo article-excerpt">	
-		
-			<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Alice 和 Bob 居住在一个由 $N​$ 座岛屿组成的国家，岛屿被编号为 $0​$ 到 $N-1​$。某些岛屿之间有桥相连，桥上的道路是双向的，但一次只能供一人通行。其中一些桥由于年久失修成为危桥，最多只能通行两次。Alice 希望在岛屿 $a_1​$ 和 $a_2​$ 之间往返 $a_n​$ 次（从 $a_1​$ 到 $a_2​$ 再从 $a_2​$ 到 $a_1​$ 算一次往返）。同时，Bob 希望在岛屿 $b_1​$ 和 $b_2​$ 之间往返 $b_n​$ 次。这个过程中，所有危桥最多通行两次，其余的桥可以无限次通行。请问 Alice 和 Bob 能完成他们的愿望吗？</p>
-		  	  
-	</div>
-
-	<div class="article-bottom">
-		<a class="article-readmore" href="/2018/12/30/CQOI-2014-危桥/">Continue</a> 	
-	</div>	
-    
-</article>     
-     	
-    	  	
-  		
-    			
-
-<article class="article">		
-	   
-	<div class="article-header">
-	    
-		<a class="article-title" href="/2018/12/29/BZOJ-4453-cys就是要拿英魂！/">「BZOJ 4453」cys就是要拿英魂！</a>  
-	       
-		 
-
-		<div class="article-meta">
-			<time>Dec 29, 2018</time>
-			
-				<span class="iconfont icon-star"></span>
-				            
-						<a class="article-tag" href="/tags/后缀数组/">后缀数组</a>           
-				
-			
-		</div>
-	</div>
-
-
-	
-
-    
-	<div class="typo article-excerpt">	
-		
-			<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>pps 又开始 dota 视频直播了！一群每天被 pps 虐的蒟蒻决定学习 pps 的操作技术，他们把 pps 在这局放的技能记录了下来，每个技能用一个字符表示。经过研究，蒟蒻们发现字典序更大的连招威力更大。于是所有蒟蒻都想学习 pps 最强的连招。但是他们太弱了，不能学会整个视频里的连招，只能学会陈老师一段区间间内的连招，可是这个他们求不出，于是只好向你求助。为了蒟蒻们不再被 pps 虐（怎么可能），请你帮帮他们。简化题意：给你一个字符串，每次询问你一段区间的字典序最大的子串。</p>
-		  	  
-	</div>
-
-	<div class="article-bottom">
-		<a class="article-readmore" href="/2018/12/29/BZOJ-4453-cys就是要拿英魂！/">Continue</a> 	
-	</div>	
-    
-</article>     
-     	
-    	  	
-  		
-    			
-
-<article class="article">		
-	   
-	<div class="article-header">
-	    
-		<a class="article-title" href="/2018/12/28/NOI-2016-优秀的拆分/">「NOI 2016」优秀的拆分</a>  
-	       
-		 
-
-		<div class="article-meta">
-			<time>Dec 28, 2018</time>
-			
-				<span class="iconfont icon-star"></span>
-				            
-						<a class="article-tag" href="/tags/后缀数组/">后缀数组</a>           
-				
-			
-		</div>
-	</div>
-
-
-	
-
-    
-	<div class="typo article-excerpt">	
-		
-			<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>如果一个字符串可以被拆分为 AABB 的形式，其中 A 和 B 是任意非空字符串，则我们称该字符串的这种拆分是优秀的。例如，对于字符串 aabaabaa，如果令 A=aab, B=a，我们就找到了这个字符串拆分成 AABB 的一种方式。一个字符串可能没有优秀的拆分，也可能存在不止一种优秀的拆分。现在给出一个长度为 n 的字符串 S，我们需要求出，在它所有子串的所有拆分方式中，优秀拆分的总个数。这里的子串是指字符串中连续的一段。以下事项需要注意：出现在不同位置的相同子串，我们认为是不同的子串，它们的优秀拆分均会被记入答案。在一个拆分中，允许出现 A=B。字符串本身也是它的一个子串。</p>
-		  	  
-	</div>
-
-	<div class="article-bottom">
-		<a class="article-readmore" href="/2018/12/28/NOI-2016-优秀的拆分/">Continue</a> 	
-	</div>	
-    
-</article>     
-     	
-    	  	
-  		
-    			
-
-<article class="article">		
-	   
-	<div class="article-header">
-	    
-		<a class="article-title" href="/2018/12/28/BZOJ-2119-股市的预测/">「BZOJ 2119」股市的预测</a>  
-	       
-		 
-
-		<div class="article-meta">
-			<time>Dec 28, 2018</time>
-			
-				<span class="iconfont icon-star"></span>
-				            
-						<a class="article-tag" href="/tags/后缀数组/">后缀数组</a>           
-				
-			
-		</div>
-	</div>
-
-
-	
-
-    
-	<div class="typo article-excerpt">	
-		
-			<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>墨墨的妈妈热爱炒股，她要求墨墨为她编写一个软件，预测某只股票未来的走势。股票折线图是研究股票的必备工具，它通过一张时间与股票的价位的函数图像清晰地展示了股票的走势情况。经过长时间的观测，墨墨发现很多股票都有如下的规律：之前的走势很可能在短时间内重现！如图可以看到这只股票 A 部分的股价和 C 部分的股价的走势如出一辙。通过这个观测，墨墨认为他可能找到了一个预测股票未来走势的方法。进一步的研究可是难住了墨墨，他本想试图统计 B 部分的长度与发生这种情况的概率关系，不过由于数据量过于庞大，依赖人脑的力量难以完成，于是墨墨找到了善于编程的你，请你帮他找一找给定重现的间隔（B 部分的长度），有多少个时间段满足首尾部分的走势完全相同呢？当然，首尾部分的长度不能为零。</p>
-		  	  
-	</div>
-
-	<div class="article-bottom">
-		<a class="article-readmore" href="/2018/12/28/BZOJ-2119-股市的预测/">Continue</a> 	
-	</div>	
-    
-</article>     
-     	
-    	  	
-  		
-    			
-
-<article class="article">		
-	   
-	<div class="article-header">
-	    
-		<a class="article-title" href="/2018/12/28/NOI-2015-品酒大会/">「NOI 2015」品酒大会</a>  
-	       
-		 
-
-		<div class="article-meta">
-			<time>Dec 28, 2018</time>
-			
-				<span class="iconfont icon-star"></span>
-				            
-						<a class="article-tag" href="/tags/后缀数组/">后缀数组</a>           
-				            
-						<a class="article-tag" href="/tags/并查集/">并查集</a>           
-				
-			
-		</div>
-	</div>
-
-
-	
-
-    
-	<div class="typo article-excerpt">	
-		
-			<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>一年一度的“幻影阁夏日品酒大会”隆重开幕了。大会包含品尝和趣味挑战两个环节，分别向优胜者颁发“首席品酒家”和“首席猎手”两个奖项，吸引了众多品酒师参加。</p>
-		  	  
-	</div>
-
-	<div class="article-bottom">
-		<a class="article-readmore" href="/2018/12/28/NOI-2015-品酒大会/">Continue</a> 	
-	</div>	
-    
-</article>     
-     	
-    	  	
-  		
-    			
-
-<article class="article">		
-	   
-	<div class="article-header">
-	    
-		<a class="article-title" href="/2018/12/28/THUSC-2016-成绩单/">「THUSC 2016」成绩单</a>  
-	       
-		 
-
-		<div class="article-meta">
-			<time>Dec 28, 2018</time>
-			
-				<span class="iconfont icon-star"></span>
-				            
-						<a class="article-tag" href="/tags/DP套DP/">DP套DP</a>           
-				
-			
-		</div>
-	</div>
-
-
-	
-
-    
-	<div class="typo article-excerpt">	
-		
-			<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>期末考试结束了，班主任 L 老师要将成绩单分发到每位同学手中。L 老师共有 $n$ 份成绩单，按照编号从 $1$ 到 $n$ 的顺序叠放在桌子上，其中编号为 $i$ 的成绩单分数为 $W_i$。</p>
-		  	  
-	</div>
-
-	<div class="article-bottom">
-		<a class="article-readmore" href="/2018/12/28/THUSC-2016-成绩单/">Continue</a> 	
-	</div>	
-    
-</article>     
-     	
-    	  	
-  		
-    			
-
-<article class="article">		
-	   
-	<div class="article-header">
-	    
-		<a class="article-title" href="/2018/12/28/Hexo博客搭建笔记/">Hexo博客搭建笔记</a>  
-	       
-		 
-
-		<div class="article-meta">
-			<time>Dec 28, 2018</time>
-			
-				<span class="iconfont icon-star"></span>
-				            
-						<a class="article-tag" href="/tags/Hexo/">Hexo</a>           
-				
-			
-		</div>
-	</div>
-
-
-	
-
-    
-	<div class="typo article-excerpt">	
-		 
-			<h3 id="Hexo博客搭建教程"><a href="#Hexo博客搭建教程" class="headerlink" title="Hexo博客搭建教程"></a>Hexo博客搭建教程</h3><p>详见<a href="https://www.cnblogs.com/fengxiongZz/p/7707219.html" target="_blank" rel="noopener">这里</a></p>
-<h3 id="Hexo安装失败的解决方法"><a href="#Hexo安装失败的解决方法" class="headerlink" title="Hexo安装失败的解决方法"></a>Hexo安装失败的解决方法</h3><p>目前国内 $npm$ 源有问题，所以键入如下代码即可安装成功：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> -g cnpm <span class="comment">--registry=https://registry.npm.taobao.org</span></span><br><span class="line">cnpm <span class="keyword">install</span> hexo-cli -g</span><br></pre></td></tr></table></figure>
-		  	  
-	</div>
-
-	<div class="article-bottom">
-		<a class="article-readmore" href="/2018/12/28/Hexo博客搭建笔记/">Continue</a> 	
-	</div>	
-    
-</article>     
-     	
-    	  	
-  		
-    			
-
-<article class="article">		
-	   
-	<div class="article-header">
-	    
-		<a class="article-title" href="/2018/12/28/hello-world/">Hello World</a>  
-	       
-		 
-
-		<div class="article-meta">
-			<time>Dec 28, 2018</time>
-			
-		</div>
-	</div>
-
-
-	
-
-    
-	<div class="typo article-excerpt">	
-		 
-			<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-		  	  
-	</div>
-
-	<div class="article-bottom">
-		<a class="article-readmore" href="/2018/12/28/hello-world/">Continue</a> 	
-	</div>	
-    
-</article>     
-     	
-
-
-
-
-
-          </div> 
-      </div>            
-    
-    <a id="page-backTop">
-      <span>
-        <i class="iconfont icon-backtotop"></i>
-      </span>
-    </a> 
-
-  
-    
-    <div class="search-container sildeUpMin">
-        <div class="search-header">
-            <input type="text" placeholder="Typing Something here." id="search-input" class="search-input">
-            <span class="search-cancel">
-                <i class="iconfont icon-cancel">
-            </i></span>
-        </div>
-        <div id="search-result" class="search-result"></div>
+        
     </div>
- 
-     <div class="mobile-menu">      
-
-      
-      <img class="mobile-menu-icon" src="/images/favicon.png">   
-      
-
-         
-            
-
-            <a class="mobile-menu-link" href="/">Home
-            </a>
-            
-         
-            
-
-            <a class="mobile-menu-link" href="/archives">Archives
-            </a>
-            
-         
-            
-
-            <a class="mobile-menu-link" href="/tags">Tags
-            </a>
-            
-         
-            
-
-            <a class="mobile-menu-link" href="/about">About
-            </a>
-            
-         
-                          
-
-            <a class="mobile-menu-link mobile-menu-search" href="#">Search </a>                 
-            
-         
-      
-</div>        
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
     
-
-
-
-     
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
     
+    &copy; 2018 <a href="http://fly-in-milkyway.com">UNIVERSE</a>
+</div>
+</div>
 
-
-
-
-<footer id="footer">	    
-
-		
-		<div class="footer-copyright">
-		&copy;
-		
-		2018		
-	
-		Lemon
-		<br>
-
-		Theme  <a href="https://github.com/Lemonreds/hexo-theme-Nayo" target="_blank">Nayo</a>
-		</div>			
-	 
-</footer>   
-
-    <script src="/nayo.bundle.js"></script>           
-  </body>        
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js" integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js" integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js" integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?67411559"></script>
+</body>
 </html>
